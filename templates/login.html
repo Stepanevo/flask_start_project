@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <form class="card" method="POST">
+      <h1>Sign in</h1>
+      <p>Enter your email and password to continue.</p>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="name@example.com" required />
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="••••••••" required />
+      </div>
+
+      <button type="submit">Sign in</button>
+
+      <div class="small-links">
+        <a href="{{ url_for('hello') }}">Continue as guest</a>
+        <a href="#">Forgot password?</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
